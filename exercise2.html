@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 with jQuery</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        #formData {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+        <!-- Two text fields - Name and Email -->
+        <input id="name" type="text" placeholder="Name" value=""><br><br>
+        <input id="email" type="email" placeholder="Email" value=""><br><br>
+        <!-- Two radio buttons for Gender - Male and Female -->
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="Female"><br><br>
+        <!-- Submit button -->
+        <input type="button" value="Submit" id="submitButton">
+    </form>
+
+    <!-- Display form data -->
+    <div id="formData"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#submitButton').click(function () {
+                // Get form data
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var gender = $('input[name="gender"]:checked').val();
+
+                // Display form data
+                var formDataDiv = $('#formData');
+                formDataDiv.html("<h2>Form Data:</h2>");
+                formDataDiv.append("<p><strong>Name:</strong> " + name + "</p>");
+                formDataDiv.append("<p><strong>Email:</strong> " + email + "</p>");
+                formDataDiv.append("<p><strong>Gender:</strong> " + (gender ? gender : "Not specified") + "</p>");
+
+                // Fade in the form data
+                formDataDiv.fadeIn();
+
+                // Change font, add border, and add background color using jQuery CSS methods
+                formDataDiv.css({
+                    'font-family': 'Arial',
+                    'border': '2px solid #333',
+                    'background-color': '#f0f0f0'
+                });
+            });
+
+            // Slide up the form data on mouseover
+            $('#formData').mouseover(function () {
+                $(this).slideUp();
+            });
+        });
+    </script>
+</body>
+
+</html>
