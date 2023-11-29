@@ -1,54 +1,17 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
-
-body {
-  background: #000000;
-  min-height: 100vh;
-  /* overflow-x: hidden; */
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 100;
-  background-color: grey;
-}
-
-.logo {
-  font-size: 2em;
-  color: #f2f2f2;
-  pointer-events: none;
-  margin-right: 270px;
-}
-
-.navigation a {
-  text-decoration: none;
-  color: #fff;
-  padding: 6px 15px;
-  border-radius: 20px;
-  margin: 0 10px;
-  font-weight: 600;
-}
-
-.navigation a:hover ,
-.navigation a.active {
-  background-color: #fff;
-  color:#359381;
-}
-
 /* Add your custom styles here */
 
+
+.nav-item:has(> input) {
+    align-items: center;
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+.icons-container {
+    gap: 1rem;
+}
 
 .hero {
   background-color: #f8f9fa;
@@ -92,6 +55,7 @@ header {
   padding: 30px 0;
   /* Add padding to the top and bottom of the footer */
   text-align: center;
+  margin-top: 100px;
 }
 
 .footer a {
@@ -127,8 +91,4 @@ header {
     margin-right: 0;
     margin-bottom: 10px;
   }
-}
-
-.dropdown-menu {
-  margin-left: 200px;
 }

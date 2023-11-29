@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+    integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+    integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <title>SOI Learning Portal</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #3498db;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        SOI Learning Portal
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Courses</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">HTML</a></li>
+              <li><a class="dropdown-item" href="#">CSS</a></li>
+              <li><a class="dropdown-item" href="#">PHP</a></li>
+              <li><a class="dropdown-item" href="#">JavaScript</a></li>
+              <li><a class="dropdown-item" href="#">Python</a></li>
+              <li><a class="dropdown-item" href="#">Java</a></li>
+              <li><a class="dropdown-item" href="#">iOS</a></li>
+              <li><a class="dropdown-item" href="#">React</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="margin-right: 10px;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-light" id="search-btn" type="button">Search</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div class="position-relative">
+            <a href="#" style="color: white; font-size: 30px;" class="notifications" id="notificationsDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class='bx bx-bell'></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="notificationsDropdown">
+              <!-- Unread messages -->
+              <li><a class="dropdown-item" href="#">Unread Message 1</a></li>
+              <li><a class="dropdown-item" href="#">Unread Message 2</a></li>
+              <!-- Divider between unread and read messages -->
+              <li class="dropdown-divider"></li>
+              <!-- Read messages -->
+              <li><a class="dropdown-item" href="#">Read Message 1</a></li>
+              <li><a class="dropdown-item" href="#">Read Message 2</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <a href="#" class="user-circle"><i class='bx bxs-user-circle'></i></a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+
+  <section class="hero text-center px-5" style="margin-top: 100px;">
+    <div class="container d-flex banner-content px-5 px-lg-5">
+      <div class="text-content">
+        <h1>Welcome to the SOI Learning Portal</h1>
+        <p>Explore a world of coding lessons tailored to your learning needs and preferences.</p>
+        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-secondary">Learn More</a>
+      </div>
+
+      <img src="https://static.thenounproject.com/png/581062-200.png" alt="Learning Portal Image" class="img-fluid">
+    </div>
+  </section>
+
+  <div class="banner">
+    <div>
+      <i class="fa-solid fa-user"></i>
+      <span>Find the right instructor for you</span>
+    </div>
+    <div>
+      <i class="fa-solid fa-book"></i>
+      <span>158 online courses</span>
+    </div>
+    <div>
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <span>Lifetime access</span>
+    </div>
+  </div>
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- Three-column Section -->
+        <section class="three-column">
+          <div class="container-fluid px-5 px-lg-5">
+            <div class="container px-5">
+              <div class="row">
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://neetable.com/img/ios-development/ios-app-development-banner.svg"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text">Course Duration: 2h 30m
+                      </p>
+                      <p class="card-text">Instructor: Hannah Lim</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img
+                      src="https://images.tynker.com/blog/wp-content/uploads/20190226100225/02-25-2018-html-css-announcement-blog.png"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">User Experience and Interface Design</h5>
+                      <p class="card-text">Course Duration: 2h 45m</p>
+                      <p class="card-text">Instructor: Julia Lee</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*1Bw8tqzEYn6LzmQInimbFA.png   "
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                      <p class="card-text">Course Duration: 4h 30m</p>
+                      <p class="card-text">Instructor: Ryan Low</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://www.jootoor.com/wp-content/uploads/2019/06/fundamentals-of-designing.jpg"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text">Course Duration: 2h 30m
+                      </p>
+                      <p class="card-text">Instructor: Hannah Lim</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="carousel-item">
+        <!-- Three-column Section -->
+        <section class="three-column">
+          <div class="container-fluid px-5 px-lg-5">
+            <div class="container px-5">
+              <div class="row">
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://neetable.com/img/ios-development/ios-app-development-banner.svg"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text">Course Duration: 2h 30m
+                      </p>
+                      <p class="card-text">Instructor: Hannah Lim</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img
+                      src="https://images.tynker.com/blog/wp-content/uploads/20190226100225/02-25-2018-html-css-announcement-blog.png"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">User Experience and Interface Design</h5>
+                      <p class="card-text">Course Duration: 2h 45m</p>
+                      <p class="card-text">Instructor: Julia Lee</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*1Bw8tqzEYn6LzmQInimbFA.png   "
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                      <p class="card-text">Course Duration: 4h 30m</p>
+                      <p class="card-text">Instructor: Ryan Low</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://www.jootoor.com/wp-content/uploads/2019/06/fundamentals-of-designing.jpg"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text">Course Duration: 2h 30m
+                      </p>
+                      <p class="card-text">Instructor: Hannah Lim</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="carousel-item">
+        <!-- Three-column Section -->
+        <section class="three-column">
+          <div class="container-fluid px-5 px-lg-5">
+            <div class="container px-5">
+              <div class="row">
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://neetable.com/img/ios-development/ios-app-development-banner.svg"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text">Course Duration: 2h 30m
+                      </p>
+                      <p class="card-text">Instructor: Hannah Lim</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img
+                      src="https://images.tynker.com/blog/wp-content/uploads/20190226100225/02-25-2018-html-css-announcement-blog.png"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">User Experience and Interface Design</h5>
+                      <p class="card-text">Course Duration: 2h 45m</p>
+                      <p class="card-text">Instructor: Julia Lee</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*1Bw8tqzEYn6LzmQInimbFA.png   "
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                      <p class="card-text">Course Duration: 4h 30m</p>
+                      <p class="card-text">Instructor: Ryan Low</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat the above card structure for additional cards -->
+                <!-- Sample card, repeat as needed -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="https://www.jootoor.com/wp-content/uploads/2019/06/fundamentals-of-designing.jpg"
+                      class="card-img-top" alt="Course Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text">Course Duration: 2h 30m
+                      </p>
+                      <p class="card-text">Instructor: Hannah Lim</p>
+                      <a href="#" class="btn btn-primary">Book lesson</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">My Bookmarks</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small d-flex flex-wrap" id="offcanvas-body">
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2021 SOI Learning Portal. All rights reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Feedback</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+
+    $(function () {
+      var searchTags = [
+        "HTML",
+        "CSS",
+        "PHP",
+        "JavaScript",
+        "Python",
+        "Java",
+        "iOS",
+        "Swift",
+        "React",
+        "Web Design",
+        "Web Development"
+      ];
+
+      $(".search-bar").autocomplete({
+        source: searchTags
+      });
+    });
+
+    $('[data-bs-toggle="tooltip"]').tooltip();
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+    integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
